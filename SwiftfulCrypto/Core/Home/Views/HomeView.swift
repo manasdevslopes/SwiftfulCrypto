@@ -22,11 +22,18 @@ struct HomeView: View {
             VStack {
                 homeHeader
                 
+                SearchBarView(searchText: $vm.searchText)
                 columnTitles
                 
                 if !showPortfolio {
-                    allCoinsList
-                        .transition(.move(edge: .leading))
+                   if (vm.allCoins.count > 0) {
+                        allCoinsList
+                            .transition(.move(edge: .leading))
+                   } else if(vm.searchText.count > 0 && vm.allCoins.count == 0) {
+                        Text("Crypto Coin Not Found")
+                    } else {
+                        ProgressView()
+                    }
                 }
                 if showPortfolio {
                     portfolioCoinsList

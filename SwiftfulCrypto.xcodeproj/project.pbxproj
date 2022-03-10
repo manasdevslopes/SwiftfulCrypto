@@ -29,6 +29,8 @@
 		FD7F0F7A27DA2B5E00F01F0D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0F7927DA2B5E00F01F0D /* String.swift */; };
 		FD7F0F7C27DA2C9C00F01F0D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0F7B27DA2C9C00F01F0D /* DetailViewModel.swift */; };
 		FD7F0F7E27DA2CFB00F01F0D /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0F7D27DA2CFB00F01F0D /* CoinDetailDataService.swift */; };
+		FD7F0F8027DA4E2800F01F0D /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0F7F27DA4E2800F01F0D /* ChartView.swift */; };
+		FD7F0F8227DA582C00F01F0D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F0F8127DA582C00F01F0D /* Date.swift */; };
 		FD8D15D727D374B000FEF727 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D15D627D374B000FEF727 /* CircleButtonAnimationView.swift */; };
 		FD992F3227D5E2E70090C664 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD992F3127D5E2E70090C664 /* CoinModel.swift */; };
 		FD992F3427D5F3E90090C664 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD992F3327D5F3E90090C664 /* CoinRowView.swift */; };
@@ -69,6 +71,8 @@
 		FD7F0F7927DA2B5E00F01F0D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		FD7F0F7B27DA2C9C00F01F0D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FD7F0F7D27DA2CFB00F01F0D /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		FD7F0F7F27DA4E2800F01F0D /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		FD7F0F8127DA582C00F01F0D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FD8D15D627D374B000FEF727 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		FD992F3127D5E2E70090C664 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		FD992F3327D5F3E90090C664 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				FD7F0F7527DA199900F01F0D /* DetailView.swift */,
+				FD7F0F7F27DA4E2800F01F0D /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				FD992F3727D5FB4E0090C664 /* Double.swift */,
 				FD69E39F27D74E3C0002D51E /* UIApplication.swift */,
 				FD7F0F7927DA2B5E00F01F0D /* String.swift */,
+				FD7F0F8127DA582C00F01F0D /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				FDE8060227D6300500A8FD99 /* NetworkingManager.swift in Sources */,
 				FD7F0F7127DA00DF00F01F0D /* HapticsManager.swift in Sources */,
 				FD67514627D8C254002BDA92 /* CoinLogoView.swift in Sources */,
+				FD7F0F8027DA4E2800F01F0D /* ChartView.swift in Sources */,
 				FD69E3A627D773790002D51E /* HomeStatsView.swift in Sources */,
 				FD67514027D88C21002BDA92 /* MarketDataService.swift in Sources */,
 				FD8D15D727D374B000FEF727 /* CircleButtonAnimationView.swift in Sources */,
@@ -378,6 +385,7 @@
 				FD69E39A27D722DE0002D51E /* CoinImageViewModel.swift in Sources */,
 				FD992F3627D5F48B0090C664 /* PreviewProvider.swift in Sources */,
 				FD67514227D89858002BDA92 /* PortfolioView.swift in Sources */,
+				FD7F0F8227DA582C00F01F0D /* Date.swift in Sources */,
 				FD992F3827D5FB4E0090C664 /* Double.swift in Sources */,
 				FD69E39827D720CC0002D51E /* CoinImageService.swift in Sources */,
 				FD7F0F7827DA29A000F01F0D /* CoinDetailModel.swift in Sources */,

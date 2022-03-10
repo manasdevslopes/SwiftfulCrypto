@@ -44,8 +44,12 @@ struct HomeView: View {
                     }
                 }
                 if showPortfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    if vm.portfolioCoins.count > 0 {
+                        portfolioCoinsList
+                            .transition(.move(edge: .trailing))
+                    } else {
+                        Text("No Crypto Coins Found. Please add one")
+                    }
                 }
                 
                 Spacer(minLength: 0)

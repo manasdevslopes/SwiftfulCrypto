@@ -9,5 +9,9 @@ import Foundation
 import SwiftUI
 
 class HapticsManager {
-    static let generator = UINotificationFeedbackGenerator()
+    static private let generator = UINotificationFeedbackGenerator()
+    
+    static func notification(type: UINotificationFeedbackGenerator.FeedbackType) {
+        generator.notificationOccurred(type)
+    }
 }

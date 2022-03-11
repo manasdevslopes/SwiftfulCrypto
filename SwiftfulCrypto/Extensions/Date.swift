@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     
-    // "2021-03-13T20:49:26.606Z"
+    // "2021-03-13T23:18:10.268Z"
     init(coinGeckoString: String) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -19,8 +19,8 @@ extension Date {
     
     private var shortFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        print(formatter)
+        formatter.setLocalizedDateFormatFromTemplate("MMMM dd, yyyy")
+        // formatter.dateStyle = .short
         return formatter
     }
     

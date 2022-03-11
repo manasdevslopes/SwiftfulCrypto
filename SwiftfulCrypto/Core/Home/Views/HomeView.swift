@@ -32,6 +32,7 @@ struct HomeView: View {
                 HomeStatsView(showPortfolio: $showPortfolio)
                 
                 SearchBarView(searchText: $vm.searchText)
+                    .disabled((showPortfolio && vm.portfolioCoins.count == 0 && vm.searchText.isEmpty) ? true : false)
                 
                 columnTitles
                 
@@ -46,12 +47,16 @@ struct HomeView: View {
                     }
                 }
                 if showPortfolio {
-                    if vm.portfolioCoins.count > 0 {
-                        portfolioCoinsList
-                            .transition(.move(edge: .trailing))
-                    } else {
-                        Text("No Crypto Coins Found. Please add one")
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else if vm.portfolioCoins.count > 0 {
+                            portfolioCoinsList
+                        } else {
+                            Text("No Crypto Coin Found")
+                        }
                     }
+                    .transition(.move(edge: .trailing))
                 }
                 
                 Spacer(minLength: 0)
@@ -76,6 +81,7 @@ struct HomeView_Previews: PreviewProvider {
             HomeView()
                 .navigationBarHidden(true)
         }
+        .preferredColorScheme(.dark)
         .environmentObject(dev.homeVM)
     }
 }
@@ -121,6 +127,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
@@ -134,10 +141,21 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .listStyle(PlainListStyle())
     }
+    
+    private var portfolioEmptyText: some View {
+        Text("You haven't added any coins to your portfolio yet. Click the + button to get started! 🧐")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
+    }
+    
     private func segue(coin: CoinModel) {
         selectedCoin = coin
         showDetailView.toggle()

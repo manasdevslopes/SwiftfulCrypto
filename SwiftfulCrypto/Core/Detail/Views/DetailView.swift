@@ -51,6 +51,10 @@ struct DetailView: View {
                 .padding()
             }
         }
+        .background(
+            Color.theme.background
+                .ignoresSafeArea()
+        )
         .navigationTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -65,6 +69,7 @@ struct DetailView_Previews: PreviewProvider {
         NavigationView {
             DetailView(coin: dev.coin)
         }
+        .preferredColorScheme(.dark)
     }
 }
 
